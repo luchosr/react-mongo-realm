@@ -50,11 +50,7 @@ function App() {
 
       <div className="container mt-3">
         <Routes>
-          <Route
-            exact
-            path={["/", "/restaurants"]}
-            component={RestaurantsList}
-          />
+          <Route path={("/", "/restaurants")} element={RestaurantsList} />
           <Route
             path="/restaurants/:id/review"
             render={(props) => <AddReview {...props} user={user} />}
